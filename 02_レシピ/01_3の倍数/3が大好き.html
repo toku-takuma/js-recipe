@@ -10,8 +10,14 @@
     <script>
         const genkiFunction=function(number){
             for(let n=1; n<=number; n++){
-                if(genkiFunction.indexOf("3")!==-1){
-                    console.log(`${n}!!!!!!!`)
+                let str_number=String(n)
+        //         if(str_number.indexOf("3")!==-1){
+        //             console.log(`${n}!!!!!!!`)
+        //     } else {
+        //     console.log(n)
+        // }
+        if(str_number.includes("3")){
+            console.log(`${n}!!!!!!!`)
             } else {
             console.log(n)
         }
