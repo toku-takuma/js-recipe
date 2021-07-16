@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='TAKUMA TOKUNO 自己紹介'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='TAKUMA TOKUNOの自己紹介サイトです。'>
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="TAKUMA TOKUNOの自己紹介サイトです" />
+  <title>TAKUMA TOKUNO 自己紹介</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel=”canonical” href=”URLが入る” />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header">
+      <div class="inner">
+        <h1 class="header-logo">
+          <a href=".">TAKUMA TOKUNO</a>
+        </h1>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="#works">PRODUCTS</a></li>
+            <li class="header-nav-item"><a href="#about">ABOUT ME</a></li>
+            <li class="header-nav-item"><a href="#contact">ACCOUNTS</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+<style type="text/css">
+  #photo {
+      width: 1000px;
+      height: 1000px;
+      margin: 0 auto;
+      text-align: left;
+      overflow: hidden;
+      position: relative;
+  }
+  #photo img {
+      top: 0;
+      left: 0;
+      position: absolute;
+  }
+  </style>
+  
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+      var setImg = '#photo';
+      var fadeSpeed = 1600;
+      var switchDelay = 5000;
+  
+      $(setImg).children('img').css({opacity:'0'});
+      $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+  
+      setInterval(function(){
+          $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+      },switchDelay);
+  });
+  </script>  
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <!-- main-visual -->
+      <div class="main-visual">
+        <div class="main-visual-inner">
+         <img src="images\main.jpg" alt="">
+        </div>
+        <!-- <div style="background: url(images\header.jpg);">
+        </div> -->
+        <!-- <div id="photo">
+          <img src="images/main.jpg" width="1000" height="1000" alt="">
+        </div> -->
+        <ul class="slider_fade">
+          <li><img src="images\main.jpg"></li>
+      </ul>
+      
+      </div>
+      <!-- /main-visual -->
+
+      <!-- works -->
+      <section class="works section" id="works">
+        <div class="inner">
+          <h2 class="title">PRODUCTS</h2>
+          <div class="works-list">
+            <a class="works-item" href="https://line.me/R/ti/p/@919tabij">
+              <p class="works-img"><img src="images\omikuji.jpg" alt="" /></p>
+              <p class="works-name">おみくじLINEbot</p>
+              <p class="works-info">Google Apps ScriptとJavaScriptを使ってLINEbotで大学生向けのおみくじアプリを作りました。
+                <br>名前をクリックすれば友達追加ができます。
+              </p>
+            </a>
+            <a class="works-item">
+              <p class="works-img"><img src="images\ToDo.jpg" alt="" /></p>
+              <p class="works-name">ToDoリスト管理bot</p>
+              <p class="works-info">Google Apps ScriptとGoogleカレンダーを連携し、JavaScriptを使ってLINEbotでToDoリストを管理してくれるbotを作りました。
+                <br>予定の追加や一日の予定の確認がすぐにできるようにし、加えて1週間の予定が毎朝リマインドされる機能を実装しました。
+                <br>(私のGoogleカレンダーを連携しているため、自分以外は友達追加ができません。)
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- /works -->
+
+      <!-- about -->
+      <section class="about section" id="about">
+        <div class="inner">
+          <h2 class="title">ABOUT ME</h2>
+          <div class="profile">
+            <p class="profile-img">
+              <img src="images/profile.jpg" alt="">
+            </p>
+            <div class="profile-body">
+              <p>
+                得能 拓真(とくのう たくま)
+              </p>
+              <p>
+                6月10日生まれ 東京在住<br>
+                早稲田大学3年生
+              </p>
+              <p>
+              【趣味】<br>
+                アニメ、ドラマ(日本、韓国)、音楽ゲーム、バスケットボール🏀、卓球🏓、オセロなど<br>多趣味
+              </p>
+              <p>
+                プログラミングの経験はまだ浅いですが、個人開発やチーム開発ができるようになるのを目指しています。<br>
+                23卒なので就活とも並行しながら頑張っていきます！
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /about -->
+
+      <!-- contact -->
+      <section class="contact section" id="contact">
+        <div class="inner">
+          <h2 class="title">ACCOUNTS</h2>
+          <p class="lead">
+            ぜひフォローしてください！(Twitterは就活用のアカウントです。)
+          </p>
+          <div class="contact-list">
+            <a class="contact-item" href="https://twitter.com/toku_takuma" target="_blank" rel="noopener">Twitter</a>
+            <a class="contact-item" href="https://www.instagram.com/toku_1412" target="_blank" rel="noopener">Instagram</a>
+            <!-- <ul class="follow-me">
+              <li><a href="https://twitter.com/toku_takuma"></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </section>
+      <!-- /contact -->
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;TAKUMA TOKUNO</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="script.js"></script>
+</body>
+</html>
