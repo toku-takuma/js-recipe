@@ -21,11 +21,13 @@
     <section>
       <h3>商品を買う</h3>
       <button id="buy-button-tea">お茶(100円)</button>
+      <button id="buy-button-beel">ビール(150円)</button>
     </section>
     <section>
       <h3>買った商品</h3>
       <div id="display-items"></div>
     </section>
+    <button id="oturi-button">おつり</button>
     <script>
       // HTML要素を取得する
       const buyButtonTea = document.getElementById("buy-button-tea");
@@ -35,6 +37,8 @@
       const displayJihankiMoney = document.getElementById(
         "display-jihanki-money"
       );
+      const oturiButton = document.getElementById("oturi-button");
+      const buyButtonBeel = document.getElementById("buy-button-beel");
       // buyButtonTea を押した時の処理
       buyButtonTea.onclick = function () {
         if (jihankiMoney >= 100) {
@@ -43,12 +47,27 @@
           displayItems.textContent += "🍵";
         }
       };
+
+      buyButtonBeel.onclick = function () {
+        if (jihankiMoney >= 150) {
+          jihankiMoney -= 150;
+          displayJihankiMoney.textContent = jihankiMoney;
+          displayItems.textContent += "🍺";
+        }
+      };
+
       let saifu = 1000;
       let jihankiMoney = 0;
 
       addButton100.onclick = function () {
         saifu -= 100;
         jihankiMoney += 100;
+        displaySaifu.textContent = saifu;
+        displayJihankiMoney.textContent = jihankiMoney;
+      };
+      oturiButton.onclick = function () {
+        saifu += jihankiMoney;
+        jihankiMoney = 0;
         displaySaifu.textContent = saifu;
         displayJihankiMoney.textContent = jihankiMoney;
       };
