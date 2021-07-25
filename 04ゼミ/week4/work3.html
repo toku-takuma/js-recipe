@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue自動販売機</title>
+  </head>
+  <body>
+    <h1>自動販売機</h1>
+
+    <!-- 1. 飲み物の名前と値段を表示する -->
+    <section id="app1">
+      <h3>飲み物の名前と値段を表示する</h3>
+    <!-- 2. 飲み物を買えるようにする (v-onについて) -->
+    <section id="app2">
+      <h3>飲み物を買えるようにする</h3>
+<!-- 3. 売り切れ状態を表示する１ (v-if v-elseについて) -->
+    <section id="app3">
+      <h3>売り切れ状態を表示する１</h3>
+<!-- 4. 売り切れ状態を表示する２ (v-bindについて) -->
+    <section id="app4">
+      <h3>売り切れ状態を表示する２</h3>
+<!-- 5. 複数の飲み物を表示する (v-forについて) -->
+    <section id="app5">
+	    <h3>複数の飲み物を表示する</h3>
+	
+	  <div>
+      <div v-for="drink in drinks">
+	      <div>{{ drink.name }}({{drink.stock}})</div>
+	      <button v-on:click="kau(drink)" v-bind:disabled="drink.stock===0">
+          {{ drink.price }}円
+        </button>
+      </div>
+      <!-- <div>{{ kattaKazu }}本買いました</div>
+      <div v-if="drink.stock>0">在庫あり</div>
+      <div v-else>売り切れ</div> -->
+	  </div>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	
+	<script>
+	  new Vue({
+	    el: "#app5",
+      data: {
+      drinks: [
+	        {
+	          name: "お茶",
+	          price: 120,
+	          stock: 3
+	        },
+	        {
+	          name: "水",
+	          price: 200,
+	          stock: 3
+	        }
+       ]
+    },
+	    methods: {
+	      kau: function (drink) {
+	        alert(drink.name + "を買いました。");
+	      }
+	    }
+	  });
+  </script>  
+  </body>
+</html>
